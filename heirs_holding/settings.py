@@ -26,9 +26,9 @@ STATICFILES_DIRS = [STATIC_DIR,]
 SECRET_KEY = 'django-insecure-=l1bb_v^s7sc6q%(+w09p9kho5@_h3njidj+&g1030e0s*-+l*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['red-rave-party.onrender.com',]
 
 
 # Application definition
