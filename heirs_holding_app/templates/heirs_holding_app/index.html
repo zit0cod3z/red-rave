@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+{% load crispy_forms_tags %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HEIRS HOLDING PRIVATE PARTY</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/material-icon/css/material-design-iconic-font.min.css' %}">
+  </head>
+<body>
+  <div class="wrapper" style="width: 600px; height: 600px;">
+    <div class="flip-card">
+      <div class="front card">
+        <picture>
+          <img loading="lazy" width="600" height="600" src="{% static 'images/christmas.jpg' %}">
+        </picture>
+      </div>
+      <div class="back card signup-form">
+        <form action="" method="POST" class="register-form" id="register-form">
+          {% csrf_token %}
+          <h2 style="text-align: center; text-decoration: underline;">Heirs Holding 2024 Private Party</h2>
+          <div class="form-group">
+            <label for="address">Name :</label>
+            <input type="text" name="name" id="name" placeholder="Full Name" required autocomplete="on"/>
+          </div>
+          <div class="form-group">
+            <label for="name">Email Address :</label>
+            <input type="email" name="email" placeholder="Valid Email Address" id="organization" required autocomplete="on"/>
+          </div>
+          <div class="form-group">
+            <label for="name">Phone Number :</label>
+            <input type="tel" name="phone_number" placeholder="Valid Phone Number" id="phone_number" required autocomplete="on"/>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="submit" id="submit">Register</button>
+          </div>
+      </form>
+      </div>
+    </div>
+  </div>
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
